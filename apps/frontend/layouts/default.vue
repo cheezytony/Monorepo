@@ -5,11 +5,16 @@
         <NuxtLink to="/" class="nav-brand"> Monorepo App </NuxtLink>
         <div class="nav-links">
           <template v-if="isAuthenticated">
+            <NuxtLink to="/dashboard" class="nav-link"> Dashboard </NuxtLink>
+            <NuxtLink to="/content/create" class="nav-link">
+              New Post
+            </NuxtLink>
+            <NuxtLink to="/platforms" class="nav-link"> Platforms </NuxtLink>
             <span class="nav-user">{{ user?.name }}</span>
             <button class="nav-btn" @click="logout">Logout</button>
           </template>
           <template v-else>
-            <NuxtLink to="/auth/login" class="nav-link">Sign In</NuxtLink>
+            <NuxtLink to="/auth/login" class="nav-link"> Sign In </NuxtLink>
             <NuxtLink to="/auth/register" class="nav-link nav-link-primary">
               Register
             </NuxtLink>

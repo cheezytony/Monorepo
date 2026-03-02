@@ -37,14 +37,16 @@
             minlength="8"
           />
         </div>
-        <p v-if="error" class="form-error">{{ error }}</p>
+        <p v-if="error" class="form-error">
+          {{ error }}
+        </p>
         <button type="submit" class="btn btn-primary" :disabled="loading">
           {{ loading ? 'Creating account…' : 'Create Account' }}
         </button>
       </form>
       <p class="auth-link">
         Already have an account?
-        <NuxtLink to="/auth/login">Sign In</NuxtLink>
+        <NuxtLink to="/auth/login"> Sign In </NuxtLink>
       </p>
     </div>
   </div>
