@@ -25,14 +25,16 @@
             required
           />
         </div>
-        <p v-if="error" class="form-error">{{ error }}</p>
+        <p v-if="error" class="form-error">
+          {{ error }}
+        </p>
         <button type="submit" class="btn btn-primary" :disabled="loading">
           {{ loading ? 'Signing in…' : 'Sign In' }}
         </button>
       </form>
       <p class="auth-link">
         Don't have an account?
-        <NuxtLink to="/auth/register">Register</NuxtLink>
+        <NuxtLink to="/auth/register"> Register </NuxtLink>
       </p>
     </div>
   </div>
